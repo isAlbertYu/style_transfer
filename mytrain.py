@@ -2,7 +2,7 @@
 
 import tensorflow as tf
 import numpy as np
-import tools, data_io, transform, myutil, cv2, os, model
+import tools, data_io, myutil, os, model
 from scipy import misc
 
 IMG_W = 256
@@ -21,10 +21,10 @@ CONTENT_LAYER = 'conv2_2'
 def train():
     
     pre_trained_weights = './/vgg16.npy'
-    style_image_dir = 'D:\\MyProgramma\\myPy\\21_gun\\7_gun\\my\\style_image\\mosaic.jpg'
-    image_file_dir = 'D:\\MyProgramma\\myPy\\21_gun\\7_gun\\my\\train2014'
-    save_dir = './/myModel//'
-    exp_dir = './/myGenerate'
+    style_image_dir = 'style_image/mosaic.jpg'
+    image_file_dir = 'train2014'
+    save_dir = 'myModel'
+    exp_dir = 'myGenerate'
     now_exp_dir = myutil.makeExpDir(exp_dir)
     
 ## 读取一张固定的风格图像(实际数据) 
